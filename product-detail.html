@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MuscleBlaze Biozyme Performance Whey | Vishnu Fitness</title>
+    <meta name="description" content="Buy MuscleBlaze Biozyme Performance Whey Protein. Available in multiple flavors and sizes.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="brand-logo">
+                <span>VISHNU</span>FITNESS
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="products.html" class="nav-link">Shop All</a>
+                <a href="index.html#categories" class="nav-link">Categories</a>
+                <a href="index.html#features" class="nav-link">About Us</a>
+            </div>
+            <div class="nav-icons">
+                <button class="icon-btn search-btn" aria-label="Search">
+                    <i class='bx bx-search'></i>
+                </button>
+                <button class="icon-btn cart-btn nav-cart" aria-label="Cart">
+                    <i class='bx bx-shopping-bag'></i>
+                    <span class="cart-badge">0</span>
+                </button>
+                <button class="icon-btn menu-btn" aria-label="Menu" id="menu-btn">
+                    <i class='bx bx-menu'></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu" id="mobile-menu">
+            <button class="close-menu" id="close-menu"><i class='bx bx-x'></i></button>
+            <div class="mobile-nav-links">
+                <a href="index.html" class="mobile-nav-link">Home</a>
+                <a href="products.html" class="mobile-nav-link">Shop All</a>
+                <a href="index.html#categories" class="mobile-nav-link">Categories</a>
+                <a href="index.html#features" class="mobile-nav-link">About Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb container" style="margin-top: 100px; padding: 20px 0;">
+        <a href="index.html" class="text-muted">Home</a> <i class='bx bx-chevron-right text-muted'></i>
+        <a href="muscleblaze.html" class="text-muted">MuscleBlaze</a> <i class='bx bx-chevron-right text-muted'></i>
+        <span class="text-brand">Biozyme Performance Whey</span>
+    </div>
+
+    <!-- Product Detail Section -->
+    <section class="pdp-section container">
+        <div class="pdp-grid">
+            
+            <!-- Left: Images -->
+            <div class="pdp-images">
+                <div class="pdp-main-image">
+                    <!-- Real placeholder image representing the tub -->
+                    <img id="main-product-img" src="assets/images/mb_biozyme.png" alt="MuscleBlaze Biozyme Whey">
+                </div>
+                <div class="pdp-thumbnails">
+                    <img src="assets/images/mb_biozyme.png" class="thumbnail active" alt="Front View">
+                    <img src="assets/images/mb_biozyme.png" class="thumbnail" alt="Nutrition Facts">
+                    <img src="assets/images/mb_biozyme.png" class="thumbnail" alt="Details">
+                </div>
+            </div>
+
+            <!-- Right: Details -->
+            <div class="pdp-details">
+                <div class="product-brand" style="font-size: 1rem;">MuscleBlaze</div>
+                <h1 class="pdp-title">Biozyme Performance Whey Protein</h1>
+                
+                <div class="product-rating" style="margin-bottom: 1rem; color: #ffb400; font-size: 1.2rem;">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star-half'></i>
+                    <span class="text-muted" style="font-size: 0.9rem; margin-left: 0.5rem;">(1,245 Reviews)</span>
+                </div>
+
+                <div class="pdp-price">
+                    <span class="price-current" id="pdp-price">₹2,499</span>
+                    <span class="price-old" id="pdp-old-price">₹3,299</span>
+                    <span class="discount-badge" id="pdp-discount">24% OFF</span>
+                </div>
+
+                <p class="pdp-desc text-muted">
+                    Clinically proven to ensure 50% higher protein absorption and 60% superior BCAA absorption compared to other whey proteins. Features the unique Enhanced Absorption Formula (EAF®).
+                </p>
+
+                <!-- Flavor Selector -->
+                <div class="selector-group">
+                    <h4 class="selector-title">Select Flavor: <span id="selected-flavor" class="text-brand">Rich Chocolate</span></h4>
+                    <div class="pills-container" id="flavor-selector">
+                        <button class="pill active" data-flavor="Rich Chocolate">Rich Chocolate</button>
+                        <button class="pill" data-flavor="Magical Mango">Magical Mango</button>
+                        <button class="pill" data-flavor="Kesar Thandi">Kesar Thandi</button>
+                        <button class="pill" data-flavor="Vanilla">Vanilla</button>
+                    </div>
+                </div>
+
+                <!-- Weight Selector -->
+                <div class="selector-group">
+                    <h4 class="selector-title">Select Weight: <span id="selected-weight" class="text-brand">1 kg</span></h4>
+                    <div class="pills-container" id="weight-selector">
+                        <button class="pill" data-weight="500g" data-price="1399" data-old="1899">500 g</button>
+                        <button class="pill active" data-weight="1kg" data-price="2499" data-old="3299">1 kg (27 Servings)</button>
+                        <button class="pill" data-weight="2kg" data-price="4699" data-old="6499">2 kg (54 Servings)</button>
+                        <button class="pill" data-weight="4kg" data-price="8999" data-old="12999">4 kg (108 Servings)</button>
+                    </div>
+                </div>
+
+                <div class="pdp-actions">
+                    <div class="quantity-selector">
+                        <button class="qty-btn" id="qty-minus"><i class='bx bx-minus'></i></button>
+                        <input type="text" id="qty-input" value="1" readonly>
+                        <button class="qty-btn" id="qty-plus"><i class='bx bx-plus'></i></button>
+                    </div>
+                    <button class="btn btn-primary add-to-cart-btn pdp-cart-btn" style="flex-grow: 1; padding: 1.2rem;">Add to Cart</button>
+                </div>
+                
+                <div class="pdp-benefits">
+                    <div class="benefit-item"><i class='bx bx-check-shield'></i> Authenticity Guaranteed</div>
+                    <div class="benefit-item"><i class='bx bx-package'></i> Free Shipping over ₹999</div>
+                    <div class="benefit-item"><i class='bx bx-refresh'></i> 14-Day Return Policy</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Info Tabs -->
+        <div class="pdp-tabs-container">
+            <div class="pdp-tab-headers">
+                <button class="tab-btn active" data-tab="tab-desc">Description</button>
+                <button class="tab-btn" data-tab="tab-nutri">Nutritional Facts</button>
+                <button class="tab-btn" data-tab="tab-use">How to Use</button>
+            </div>
+            
+            <div class="pdp-tab-content active" id="tab-desc">
+                <h3 style="margin-bottom: 1rem;">Why MuscleBlaze Biozyme Performance Whey?</h3>
+                <p class="text-muted" style="margin-bottom: 1rem;">MuscleBlaze Biozyme Performance Whey is crafted specifically for Indian bodies to maximize protein absorption. With its patent-pending Enhanced Absorption Formula (EAF®), it ensures 50% higher protein absorption compared to standard whey proteins.</p>
+                <ul class="text-muted" style="list-style-type: disc; margin-left: 2rem;">
+                    <li>Delivers 25g of protein per serving.</li>
+                    <li>Packed with 11.75g of EAAs and 5.51g of BCAAs.</li>
+                    <li>Clinically tested and certified by Informed Choice Program U.K.</li>
+                    <li>Minimizes protein digestion issues like bloating and indigestion.</li>
+                </ul>
+            </div>
+            
+            <div class="pdp-tab-content" id="tab-nutri">
+                <table class="nutri-table">
+                    <tr><th>Nutritional Information</th><th>Per 36g Serving</th></tr>
+                    <tr><td>Energy</td><td>132.84 kcal</td></tr>
+                    <tr><td>Protein</td><td>25.0 g</td></tr>
+                    <tr><td>Carbohydrate</td><td>4.5 g</td></tr>
+                    <tr><td>Added Sugars</td><td>0.0 g</td></tr>
+                    <tr><td>Total Fat</td><td>1.64 g</td></tr>
+                    <tr><td>BCAAs</td><td>5.51 g</td></tr>
+                </table>
+            </div>
+            
+            <div class="pdp-tab-content" id="tab-use">
+                <h3 style="margin-bottom: 1rem;">Recommended Usage</h3>
+                <p class="text-muted">Add 1 level scoop (36g) of MuscleBlaze Biozyme Performance Whey to 200 ml of chilled water. Shake vigorously for 15 to 30 seconds for a thick and creamy shake.</p>
+                <p class="text-muted" style="margin-top: 1rem;"><strong>Best time to consume:</strong> Early morning, post-workout, or in between meals for sustained muscle recovery.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-col brand-col">
+                    <a href="index.html" class="brand-logo">
+                        <span>VISHNU</span>FITNESS
+                    </a>
+                    <p class="footer-desc">Premium gym supplements for those who refuse to settle. Elevate your performance and build your legacy with our elite formulations.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class='bx bxl-instagram'></i></a>
+                        <a href="#" class="social-link"><i class='bx bxl-facebook'></i></a>
+                        <a href="#" class="social-link"><i class='bx bxl-youtube'></i></a>
+                        <a href="#" class="social-link"><i class='bx bxl-twitter'></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Shop All</a></li>
+                        <li><a href="#">Track Order</a></li>
+                        <li><a href="index.html#features">About Us</a></li>
+                        <li><a href="#">Contact Support</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-heading">Top Brands</h4>
+                    <ul class="footer-links">
+                        <li><a href="muscleblaze.html">MuscleBlaze</a></li>
+                        <li><a href="gnc.html">GNC</a></li>
+                        <li><a href="wellcore.html">Wellcore</a></li>
+                        <li><a href="avatar.html">Avatar</a></li>
+                        <li><a href="products.html">View All Brands</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col newsletter-col">
+                    <h4 class="footer-heading">Newsletter</h4>
+                    <form class="newsletter-form" onsubmit="event.preventDefault();">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" class="btn-subscribe"><i class='bx bx-send'></i></button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Vishnu Fitness. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Refund Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    
+    
+
+    <!-- JS -->
+    <script src="js/data.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/pdp.js"></script>
+
+</body>
+</html>

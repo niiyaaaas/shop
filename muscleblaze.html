@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MuscleBlaze Products | Vishnu Fitness</title>
+    <meta name="description" content="Shop premium gym supplements from top brands like MuscleBlaze, GNC, Wellcore, Avatar, and more.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .page-header {
+            padding: 150px 0 50px;
+            text-align: center;
+            background-color: var(--clr-bg-alt);
+            border-bottom: var(--border-light);
+            margin-bottom: var(--spacing-lg);
+        }
+        .filters-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: var(--border-light);
+        }
+        .filter-select {
+            background: transparent;
+            color: var(--clr-text-main);
+            border: var(--border-light);
+            padding: 0.5rem 1rem;
+            font-family: var(--font-body);
+            border-radius: var(--br-sm);
+        }
+        .filter-select option {
+            background: var(--clr-bg-main);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="brand-logo">
+                <span>VISHNU</span>FITNESS
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="products.html" class="nav-link" style="color: var(--clr-brand-primary);">Shop All</a>
+                <a href="index.html#categories" class="nav-link">Categories</a>
+                <a href="index.html#features" class="nav-link">About Us</a>
+            </div>
+            <div class="nav-icons">
+                <button class="icon-btn search-btn" aria-label="Search">
+                    <i class='bx bx-search'></i>
+                </button>
+                <button class="icon-btn cart-btn nav-cart" aria-label="Cart">
+                    <i class='bx bx-shopping-bag'></i>
+                    <span class="cart-badge">0</span>
+                </button>
+                <button class="icon-btn menu-btn" aria-label="Menu" id="menu-btn">
+                    <i class='bx bx-menu'></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu" id="mobile-menu">
+            <button class="close-menu" id="close-menu"><i class='bx bx-x'></i></button>
+            <div class="mobile-nav-links">
+                <a href="index.html" class="mobile-nav-link">Home</a>
+                <a href="products.html" class="mobile-nav-link">Shop All</a>
+                <a href="index.html#categories" class="mobile-nav-link">Categories</a>
+                <a href="index.html#features" class="mobile-nav-link">About Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1 class="section-title">MuscleBlaze Products</h1>
+            <p class="section-subtitle" style="margin-top: 1rem;">Shop The Best Brands Worldwide</p>
+        </div>
+    </header>
+
+    <!-- Products Section -->
+    <section class="section" style="padding-top: 0;">
+        <div class="container">
+            
+            <div class="filters-bar">
+                <div class="results-count text-muted">Showing 1-12 of 48 products</div>
+                <div class="sort-by">
+                    <select class="filter-select">
+                        <option value="featured">Sort by: Featured</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="rating">Top Rated</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="products-grid">
+                <div class="product-card" onclick="window.location.href='product-detail.html?id=mb-biozyme'" style="cursor: pointer;">
+                    <div class="product-image-container">
+                        <img src="assets/images/mb_biozyme.png" alt="Biozyme Performance Whey Protein" class="product-img">
+                    </div>
+                    <div class="product-brand">MuscleBlaze</div>
+                    <h3 class="product-title">Biozyme Performance Whey Protein</h3>
+                    <p class="product-desc">Clinically proven to ensure 50% higher protein absorption and 60% superior BCAA absorption with Enhanced Absorption Formula (EAF®).</p>
+                    <div class="product-price-container">
+                        <span class="price-current">₹2,499</span>
+                        <span class="price-old">₹3,299</span>
+                    </div>
+                    <button class="add-to-cart-btn" onclick="event.stopPropagation(); const prod = window.productDatabase['mb-biozyme']; const defWeight = prod.weights.find(w => w.isDefault) || prod.weights[0]; window.addToCart({ id: 'mb-biozyme', title: prod.title, brand: prod.brand, img: prod.img, flavor: prod.flavors[0], weight: defWeight.label, price: defWeight.price, qty: 1 });">Add to Cart</button>
+                </div>
+
+                <div class="product-card" onclick="window.location.href='product-detail.html?id=mb-preworkout'" style="cursor: pointer;">
+                    <div class="product-image-container">
+                        <img src="assets/images/mb_preworkout.png" alt="Pre Workout 300" class="product-img">
+                    </div>
+                    <div class="product-brand">MuscleBlaze</div>
+                    <h3 class="product-title">Pre Workout 300</h3>
+                    <p class="product-desc">Explosive energy formula with 300mg caffeine and BioPerine for enhanced focus, endurance, and insane muscle pumps.</p>
+                    <div class="product-price-container">
+                        <span class="price-current">₹1,299</span>
+                        <span class="price-old">₹1,699</span>
+                    </div>
+                    <button class="add-to-cart-btn" onclick="event.stopPropagation(); const prod = window.productDatabase['mb-preworkout']; const defWeight = prod.weights.find(w => w.isDefault) || prod.weights[0]; window.addToCart({ id: 'mb-preworkout', title: prod.title, brand: prod.brand, img: prod.img, flavor: prod.flavors[0], weight: defWeight.label, price: defWeight.price, qty: 1 });">Add to Cart</button>
+                </div>
+
+                <div class="product-card" onclick="window.location.href='product-detail.html?id=mb-gainer'" style="cursor: pointer;">
+                    <div class="product-image-container">
+                        <img src="assets/images/mb_gainer.png" alt="Super Gainer XXL" class="product-img">
+                    </div>
+                    <div class="product-brand">MuscleBlaze</div>
+                    <h3 class="product-title">Super Gainer XXL</h3>
+                    <p class="product-desc">High-calorie dense formula for massive muscle gains. Contains complex carbs and high-quality protein blend.</p>
+                    <div class="product-price-container">
+                        <span class="price-current">₹3,499</span>
+                        <span class="price-old">₹4,999</span>
+                    </div>
+                    <button class="add-to-cart-btn" onclick="event.stopPropagation(); const prod = window.productDatabase['mb-gainer']; const defWeight = prod.weights.find(w => w.isDefault) || prod.weights[0]; window.addToCart({ id: 'mb-gainer', title: prod.title, brand: prod.brand, img: prod.img, flavor: prod.flavors[0], weight: defWeight.label, price: defWeight.price, qty: 1 });">Add to Cart</button>
+                </div>
+
+                <div class="product-card" onclick="window.location.href='product-detail.html?id=mb-fishoil'" style="cursor: pointer;">
+                    <div class="product-image-container">
+                        <img src="assets/images/mb_fishoil.png" alt="Omega 3 Fish Oil 1000mg" class="product-img">
+                    </div>
+                    <div class="product-brand">MuscleBlaze</div>
+                    <h3 class="product-title">Omega 3 Fish Oil 1000mg</h3>
+                    <p class="product-desc">Triple strength fish oil providing EPA and DHA to support joint health, cardiovascular function, and immunity.</p>
+                    <div class="product-price-container">
+                        <span class="price-current">₹499</span>
+                        <span class="price-old">₹799</span>
+                    </div>
+                    <button class="add-to-cart-btn" onclick="event.stopPropagation(); const prod = window.productDatabase['mb-fishoil']; const defWeight = prod.weights.find(w => w.isDefault) || prod.weights[0]; window.addToCart({ id: 'mb-fishoil', title: prod.title, brand: prod.brand, img: prod.img, flavor: prod.flavors[0], weight: defWeight.label, price: defWeight.price, qty: 1 });">Add to Cart</button>
+                </div>
+
+                            </div>
+            
+            <div class="text-center" style="margin-top: 4rem; text-align: center;">
+                <button class="btn btn-secondary">Load More Products</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-col brand-col">
+                    <a href="index.html" class="brand-logo">
+                        <span>VISHNU</span>FITNESS
+                    </a>
+                    <p class="footer-desc">Premium gym supplements for those who refuse to settle. Elevate your performance and build your legacy with our elite formulations.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class='bx bxl-instagram'></i></a>
+                        <a href="#" class="social-link"><i class='bx bxl-facebook'></i></a>
+                        <a href="#" class="social-link"><i class='bx bxl-youtube'></i></a>
+                        <a href="#" class="social-link"><i class='bx bxl-twitter'></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Shop All</a></li>
+                        <li><a href="#">Track Order</a></li>
+                        <li><a href="index.html#features">About Us</a></li>
+                        <li><a href="#">Contact Support</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-heading">Top Brands</h4>
+                    <ul class="footer-links">
+                        <li><a href="muscleblaze.html">MuscleBlaze</a></li>
+                        <li><a href="gnc.html">GNC</a></li>
+                        <li><a href="wellcore.html">Wellcore</a></li>
+                        <li><a href="avatar.html">Avatar</a></li>
+                        <li><a href="products.html">View All Brands</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col newsletter-col">
+                    <h4 class="footer-heading">Newsletter</h4>
+                    <form class="newsletter-form" onsubmit="event.preventDefault();">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" class="btn-subscribe"><i class='bx bx-send'></i></button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Vishnu Fitness. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Refund Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    
+
+    <!-- JS -->
+    <script src="js/data.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>
