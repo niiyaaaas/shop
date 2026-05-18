@@ -14,8 +14,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // 1. Populate basic text and images
     document.title = `${product.title} | Vishnu Fitness`;
     document.querySelector('.breadcrumb .text-brand').innerText = product.title;
-    document.querySelector('.breadcrumb a:nth-child(2)').innerText = product.brand;
-    document.querySelector('.breadcrumb a:nth-child(2)').href = `${product.brand.toLowerCase()}.html`;
+    const brandLink = document.querySelectorAll('.breadcrumb a')[1];
+    if (brandLink) {
+        brandLink.innerText = product.brand;
+        brandLink.href = `${product.brand.toLowerCase()}.html`;
+    }
     
     document.querySelector('.pdp-title').innerText = product.title;
     document.querySelector('.pdp-details .product-brand').innerText = product.brand;
